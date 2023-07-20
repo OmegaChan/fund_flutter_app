@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 class TopleadWiget extends StatelessWidget {
   const TopleadWiget({super.key});
@@ -6,21 +7,32 @@ class TopleadWiget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 50,
       height: 30,
-      child: Container(
-        width: 50,
-        decoration: BoxDecoration(
-          border: Border.all(width: 1, color: Colors.black),
-          color: Colors.pink,
-        ),
-        child: const Text(
-          '我的zc >',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 18,
+      child: Stack(
+        children: [
+          Positioned(
+            top: 0,
+            left: (MediaQuery.of(context).size.width - 100) / 2,
+            child: DottedBorder(
+              strokeWidth: 1,
+              dashPattern: const [1, 1],
+              color: Colors.black,
+              child: const SizedBox(
+                width: 100,
+                height: 20,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    '我的资产',
+                    style: TextStyle(
+                      fontSize: 10,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
