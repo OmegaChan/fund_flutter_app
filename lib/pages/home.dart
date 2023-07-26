@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text("基金牛牛"),
       ),
-      body: const Text("首页")
+      body: const Text("首页--新测试")
     );
   }
 }
