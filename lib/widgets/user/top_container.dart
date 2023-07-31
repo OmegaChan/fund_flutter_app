@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './top_container_marquee.dart';
 import './top_container_amount.dart';
 import './top_container_lead.dart';
+import 'top_container_panel.dart';
 import '../../config/constant.dart';
 
 class TopbgWiget extends StatelessWidget {
@@ -12,12 +13,6 @@ class TopbgWiget extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: topBgHeight,
-      // decoration: const BoxDecoration(
-      //   color: Colors.amber,
-      // ),
-      // child: CustomPaint(
-      //   painter: ShapePainter(),
-      // ),
       child: Stack(
         children: <Widget>[
           Positioned(
@@ -43,8 +38,14 @@ class TopbgWiget extends StatelessWidget {
           const Positioned(
             left: 0,
             right: 0,
-            bottom: 20,
+            top: 180,
             child: TopleadWiget()
+          ),
+          const Positioned(
+            left: 0,
+            right: 0,
+            top: 220,
+            child: TopPanelWiget()
           ),
         ],
       ),

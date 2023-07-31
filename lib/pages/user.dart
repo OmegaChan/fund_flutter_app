@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/user/top_container.dart';
+import '../config/constant.dart';
 
 class UserPage extends StatelessWidget {
   const UserPage({super.key});
@@ -18,7 +19,7 @@ class UserPage extends StatelessWidget {
           ),
         ),
       ),
-      body: const UserBody()
+      body: const UserBody(),
     );
   }
 }
@@ -32,11 +33,14 @@ class UserBody extends StatelessWidget {
     }return list;
   }
   @override Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        const TopbgWiget(),
-        ..._initListView(),
-      ],
-    ); 
+    return Container(
+      color: const Color(colorListView),
+      child: ListView(
+        children: [
+          const TopbgWiget(),
+          ..._initListView(),
+        ],
+      ),
+    );
   }
 }

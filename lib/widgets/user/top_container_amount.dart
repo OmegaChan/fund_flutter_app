@@ -15,11 +15,8 @@ class _TopAmountWigetState extends State<TopAmountWiget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 120,
-      decoration: const BoxDecoration(
-        color: Colors.amber,
-      ),
       child: Align(
         alignment: Alignment.topCenter,
         child: Column(
